@@ -1,0 +1,31 @@
+function factorialize(num) {  
+  var myArray = [];    
+  //creates the array we will save our values into
+  
+if (num > 0) {
+  while (num > 0) {
+    myArray.push(num);
+    num--;    
+    }  
+  }
+  
+//this says if our number is greater than 0, while it is greater than 0, push that number into the array and subtract by 1. It then loops onto the next number and if it is still greater than 0 it will push it and subtract and so on. For example, if our number were 2, it would push 2 to the array then subtract 1, push that to the array and then subtract 1. Since that sends it to 0, the loop will stop.
+    
+  else {    
+    return 1;
+    }
+    
+//if number is 0 or negative, it will return 1
+
+var mult = myArray.reduce(function(previousVal, currentVal) {
+  return previousVal * currentVal;  
+});
+
+//this variable creates a reduce function. Since we have multiple values in our array, we want to reduce it to the single figure (the factorial). In this case, we multiply the first and second number, and then carry on until we hit the end of our array.
+
+return mult;
+}
+
+//this just returns the result of our reduce to the console.
+
+factorialize(-10);
