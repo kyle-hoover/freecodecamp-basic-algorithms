@@ -10,4 +10,16 @@ function findLongestWord(str) {
   
   //var lengths iterates through our new array and breaks down each word into their lengths
   
+  var number = lengths.sort(function(a, b) {
+    return b-a;  
+  });
   
+  //var number sorts the length of each property in our array from largest to smallest
+  
+  return lengths[0];
+
+  //we use lengths here because we want to return the first property of our array 
+  
+}
+  
+  findLongestWord("What is the average airspeed velocity of an unladen swallow");
