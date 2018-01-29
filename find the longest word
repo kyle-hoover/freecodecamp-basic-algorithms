@@ -1,0 +1,13 @@
+function findLongestWord(str) {
+
+  var word = str.split(" ");
+  
+  //var word splits out string into an array with each word as an input
+  
+  var lengths = word.map(function(word) {
+    return word.length;
+  });
+  
+  //var lengths iterates through our new array and breaks down each word into their lengths
+  
+  
