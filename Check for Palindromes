@@ -1,0 +1,21 @@
+function palindrome(str) {
+  var pal = str.toLowerCase().replace(/[^a-zA-Z0-9]/g,"").replace(/\s/g,"");    
+
+//var pal takes our input (str), lower cases it, replaces all special characters and replaces all spaces.    
+
+var myArray = pal.split("");  myArray.reverse().join();    
+
+//myArray takes our new shortened string in var pal and splits it into an array, reverses the order of the array and then joins the array back into a string.    
+
+var hey = myArray.join("").replace(/\s/g,"");    
+
+//var hey takes the string, joins it together and eliminates all spaces.      
+
+if (pal === hey) {    
+  return true;  
+} else {    
+  return false;  }
+  
+//finally, our if function takes var pal and compares it var hey. If they match then it returns true, if not it returns false.  }
+
+palindrome("my age is 0, 0 si ega ym.");
