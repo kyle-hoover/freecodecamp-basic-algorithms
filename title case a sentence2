@@ -1,0 +1,24 @@
+function titleCase(str) {
+  var str = str.split(" ");
+    //this takes the string variable we have and splits it into an array by each word
+    //output = ["I'm","a","little","tea","pot"]
+  
+  for (var i = 0; i < str.length; i++){
+    str[i] = str[i].toLowerCase().split('');
+      //this splits our string and lowercases every letter and splits it into new arrays by each word with each letter a string
+      //output = [["i","'","m"],["a"],["l","i","t","t","l","e"],["t","e","a"],["p","o","t"]]
+    
+    str[i][0] = str[i][0].toUpperCase();
+      //this runs through each array and for every first character in the array, the letter is uppercased
+      //output = [["I","'","m"],["A"],["L","i","t","t","l","e"],["T","e","a"],["P","o","t"]]
+    
+    str[i] = str[i].join('');
+    //this joins together all of our inner arrays into strings
+    //output = ["I'm","A","Little","Tea","Pot"]
+    }    
+    
+    return str.join(" ");  
+    //this joins together every word in the array to get our final string
+ }
+
+titleCase("I'm a little tea pot");
