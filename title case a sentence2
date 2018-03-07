@@ -19,6 +19,7 @@ function titleCase(str) {
     
     return str.join(" ");  
     //this joins together every word in the array to get our final string
+    //output = I'm A Little Tea Pot
  }
 
 titleCase("I'm a little tea pot");
