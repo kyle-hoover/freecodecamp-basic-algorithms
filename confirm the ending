@@ -1,0 +1,22 @@
+function confirmEnding(str, target) {
+  if (str.substr(-target.length) === target)
+      //str.substr() will return the characters in a string (str) starting from (beginning, to end). What happens is we check
+      the LAST word of the string (str) which is why we added the - before the next part. We then put in target.length, which
+      will check from the end of the string up to the length of the target variable. We check if this is equal to the target 
+      variable.
+    return true;
+    else return false;
+
+confirmEnding("Bastian", "ian");
+
+for example, if we put in Bastian and ian as the string and target respectively:
+    It will return true
+    This is because the negative (-) will tell our function to start at THE END of our function
+    Then it will check the length of the target 
+    Then (get this) it will count backwards in str to the length of the target and start there and work forwards again
+    so in this case, it will start with the word (str) Bastian
+    Then it will find the length of the target (ian)
+    then it will count backwards in Bastian by the length of ian (3 characters)
+    Then it will go forward from there and see if it matches the target ian
+      So it starts from Bast -> ian and compares it to ian
+      In this case it is true
