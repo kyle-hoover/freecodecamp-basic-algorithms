@@ -76,3 +76,7 @@ function largestOfFour(arr) {
 
   return results;
 }
+
+//n is just a placeholder. How it works is it will check arr[n][0] as array 0 position 0 and run through till it finds the high
+number. Then it adds 1 to n, so in the next one arr[n][0] is going to be array 1 position 0 because it adds it through the 
+function.
