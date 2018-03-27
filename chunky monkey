@@ -1,0 +1,18 @@
+function chunkArrayInGroups(arr, size) {
+  var array = [];
+    //this creates a final array that will store our "chunks"
+  
+  for (var n = 0; n < arr.length; n+=size) {
+    //this loop will actually loop and create indices at the appropriate points so we can slice (i.e. it will run until it hits the length of
+    the array and will create an index at n += size (0 + 2 then 2 + 2, etc.)
+  
+    array.push(arr.slice(n, n+size));
+      //this will slice our array starting at n and ending at n + size (in this case n + 2). The loop will have this run until we slice up
+      the entire array
+  }
+  
+  return array;
+  
+  }
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
