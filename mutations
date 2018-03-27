@@ -1,0 +1,18 @@
+function mutation(arr) {
+  var test = arr[1].toLowerCase();
+  var target = arr[0].toLowerCase();
+    //these variables assign array positions 0 and 1 to variables and make them lower case
+  
+  for (n = 0; n < test.length; n++) {
+    if (target.indexOf(test[n]) === -1)
+      return false;
+        //this loop checks through the length of the second variable (test) and tries to see if the characters are indexed in the string of
+        target. If it isn't (-1), then we return false. Every character will need to be found in target for this to be true.
+    }    
+ 
+ return true;
+   //otherwise we return true
+   
+  }
+
+mutation(["Hello", "hey"]);
