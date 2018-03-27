@@ -1,0 +1,10 @@
+function slasher(arr, howMany) {
+
+arr.splice(0,howMany);
+  //this says to remove from the array starting from position 0 up to position howMany
+
+return arr;
+
+}
+
+slasher([1, 2, 3], 2);
