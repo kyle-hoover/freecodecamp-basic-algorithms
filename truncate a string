@@ -1,0 +1,41 @@
+function truncateString(str, num) {
+
+var string = [];
+  //this creates a new variable to store our truncated string in
+
+if (str.length > num && num > 3) {
+  
+  string.push(str.slice(0, num-3));
+  
+  string.push("...");
+    //this says if the string length is greater than the number, and the number is greater than 3, cut the string off 3 digits before the
+    number and add ... at the end of it
+
+}    
+
+else if (str.length > num && num <= 3) {
+  
+  string.push(str.slice(0,num));
+  
+  string.push("...");
+    //this says if the string length is greater than the number and the number is less than 3, cut the string off at the number and add
+    ... to the end of it
+
+}    
+
+else {
+
+  return str;
+    //this says if the string length is less than the number, return the string
+  
+}    
+
+var final = string.join("");
+  //this says to join the truncated string and the ... from the array and return it as a string
+
+return final;
+  //returns the final answer
+
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 11);
