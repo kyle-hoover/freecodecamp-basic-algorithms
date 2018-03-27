@@ -1,0 +1,18 @@
+function repeatStringNumTimes(str, num) {
+  
+  var string = [];
+    //this creates an array that will store the variable str (what we're looking to have repeated)
+  
+  for (var n = 0; n < num; n++) {
+    string.push(str);
+  }    
+    //this for loop says that while our variable (n) is less than the number that we need repeated, we will push one copy of the string to
+    the created array. For example while n < 3, we push abc and add 1 to n then check it again.
+    
+  var final = string.join("");
+    //this variable will join our array into a string by each blank space (will join the strings for each space in between them)
+  
+  return final;
+  }
+  
+repeatStringNumTimes("abc", 3);
