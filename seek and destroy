@@ -4,21 +4,21 @@ function destroyer(arr) {
     //this slices through the array and pulls the arguments (2 and 3 in this case) into an array
   
   for (var i=0; i<arr.length; i++) {
-		//basic for loop to loop through our array
+	//basic for loop to loop through our array
    
 	 for (var j=0; j<arg.length; j++) {
-	 		//basic for loop to loop through our arguments
+	 	//basic for loop to loop through our arguments
 		
       if (arr[i] === arg[j])
-				//this says if the item in array matches the argument
+	//this says if the item in array matches the argument
 			
         delete arr[i];
-					//delete the argument in the array that matches
+		//delete the argument in the array that matches
     }
   }
   
    return arr.filter(Boolean);
-	 		//this just says to return what came out
+	 //this just says to return what came out (without the boolean, we would get a bunch of nulls in our answer)
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
